@@ -1,0 +1,47 @@
+/* Footer Styling */
+.footer {
+    background: linear-gradient(135deg, #19183B, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for social icons */
+.social-links a:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    font-size: 0.9rem;
+    color: #ccc;
+}

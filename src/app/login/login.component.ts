@@ -2,6 +2,7 @@ import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -17,11 +18,12 @@ export class LoginComponent {
   invalidLogin = false;
   count = 0;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private hardcodedAuthenticationService: HardcodedAuthenticationService) { }
 
-  clickEvent(){
+  handleLogin(){
     this.count++;
-    if(this.username ==='satyam' && this.password === 'satyam') {
+    // if(username ==='satyam' && password === 'satyam'){
+    if(this.hardcodedAuthenticationService.authenticate(this.username, this.password)) {
       this.router.navigate(['welcome', this.username]);
       this.invalidLogin = false;
     } else {

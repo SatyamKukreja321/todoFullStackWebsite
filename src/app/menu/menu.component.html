@@ -10,14 +10,14 @@
     <nav class="navbar">
         <div class="logo">ToDoApp</div>
         <ul class="nav-links">
-            <li><a routerLink="/welcome/satyam">Home</a></li>
-            <li><a routerLink="/todos">Tasks</a></li>
-            <li><a routerLink="#">Completed</a></li>
-            <li><a routerLink="#">Profile</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/welcome/satyam">Home</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/todos">ToDo's</a></li>
+            <!-- <li><a *ngIf="isUserLoggedIn" routerLink="#">Completed</a></li> -->
+            <!-- <li><a *ngIf="isUserLoggedIn" routerLink="#">Profile</a></li> -->
         </ul>
         <ul class="nav-links">
-            <li><a routerLink="/login">Login</a></li>
-            <li><a routerLink="/logout">Logout</a></li>
+            <li><a *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/login">Login</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout">Logout</a></li>
         </ul>
     </nav>
 
